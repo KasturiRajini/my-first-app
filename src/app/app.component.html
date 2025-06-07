@@ -37,7 +37,31 @@
   <input [(ngModel)] = "userentered" type="text" placeholder="UserName"><br><br>
   <input type="password" placeholder="Your Password"><br><br>
   <input (click)="onClick()" type="submit"><br>
-  
+  <!--Directives-->
+  <!--*ngIf Directive is a conditional statement which is executed based on the condition-->
+  <!--*ngFor directive is a looping statement which is iterated-->
+  <!--*ngSwitch Directive is a switch statement which has many options and the option that is selected that will be executeed -->
+  <h3 *ngIf = "false">Welcome to the class Directives</h3>
+  <h4 *ngFor = "let color of colors"> 
+    {{color}}
+  </h4>
+  <div [ngSwitch]="pickedColor">
+    <div *ngSwitchCase="'red'">You have picked Red Color</div>
+    <div *ngSwitchCase="'blue'">You have picked Blue Color</div>
+    <div *ngSwitchCase="'black'">You have picked Black Color</div>
+  </div>
+  <form action="">
+    <div class="container">
+      <div><input type="text" placeholder="Enter the Student ID"></div>
+      <div><input type="text" placeholder="Enter Student Name"></div>
+      <div><input type="text" placeholder="Enter Student Roll No"></div>
+      <div><input type="text" placeholder="Student's Qualification"></div>
+      <div><input type="text" placeholder="Student's Course"></div>
+      <div><input type="text" placeholder="Passout Year Of Student"></div>
+      <div><input type="text" placeholder="Student's HallTicketNo"></div>
+      <div><input type="submit" value="Add Student"></div>
+    </div>
+  </form>
 
   
 
